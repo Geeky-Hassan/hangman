@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <time.h>
 using namespace std;
+
 void gotoXY(int, int);					//For moving control on console
 void printBox(int, int, int, int);		//For printing box as border
 void loading();							//For displaying loading
@@ -10,13 +11,13 @@ void clearScreen();						//For clearing screen
 void hangmanGame();							//For displaying menu
 void startGame();						//For selecting difficulty and starting game
 void playGame(int);						//For starting and playing game
-char* getWord(int);						//For getting diffirent words
+char* getWord(int);						//For getting different words
 void encryptWord(char*, char*);			//For converting word into astericks
 void hanging(int);						//For displaying man hanging
 bool checkGuess(char*, char*, char);	//For checking guess
 bool checkWord(char*, char*);			//For checking word
 void instructions();					//For displaying instructions
-void about();							//For displaying about
+void about();							//For displaying about/Credit
 										//Getting console output handle
 HANDLE H_Console = GetStdHandle(STD_OUTPUT_HANDLE);
 void gotoXY(int X, int Y) {
@@ -100,10 +101,10 @@ void hangmanGame() {
 	}
 	SetConsoleTextAttribute(H_Console, 9);
 	printBox(29, 15, 21, 10);
-	gotoXY(31, 16);	cout << "(1)->  Play game ";
-	gotoXY(31, 18);	cout << "(2)-> How to play";
-	gotoXY(31, 20);	cout << "(3)->   Credits  ";
-	gotoXY(31, 22);	cout << "(4)->    Exit    ";
+	gotoXY(31, 16);	cout << "(1)->   Play game ";
+	gotoXY(31, 18);	cout << "(2)->  Instructions";
+	gotoXY(31, 20);	cout << "(3)->  About Developer ";
+	gotoXY(31, 22);	cout << "(4)->      Exit    ";
 	//Selecting option
 	while (true) {
 		gotoXY(0, 29);	char ch = getch();
@@ -338,13 +339,13 @@ void about() {
 	strcpy(about[2], "                                                                             ");
 	strcpy(about[3], "                                                                             ");
 	strcpy(about[4], "                                                                             ");
-	strcpy(about[5], "                               :: About Me ::                                ");
+	strcpy(about[5], "                                    :: About Me ::                             ");
 	strcpy(about[6], "                                                                             ");
-	strcpy(about[7], "                    I'm Noor Ul Hassan student of BSAI(HONS)                    ");
-	strcpy(about[8], "                                (f2022376032)                                ");
-	strcpy(about[9], "                                                                             ");
-	strcpy(about[10], "             Studying in University of Management and Technology             ");
-	strcpy(about[11], "                                                                            ");
+	strcpy(about[7], "                                   I'm Noor Ul Hassan.                         ");
+	strcpy(about[8], "                             Student of BS(AI) and an ML Engineer              ");
+	strcpy(about[9], "                                     (f2022376032)                            ");
+	strcpy(about[10], "                                                                            ");
+	strcpy(about[11], "                   Studying in University of Management and Technology       ");
 	strcpy(about[12], "                                                                             ");
 	strcpy(about[13], "                                                                             ");
 	strcpy(about[14], "                                                                             ");
