@@ -339,7 +339,7 @@ void about() {
 	strcpy(about[2], "                                                                             ");
 	strcpy(about[3], "                                                                             ");
 	strcpy(about[4], "                                                                             ");
-	strcpy(about[5], "                                    :: About Me ::                             ");
+	strcpy(about[5], "                                    :: About Me ::                            ");
 	strcpy(about[6], "                                                                             ");
 	strcpy(about[7], "                                   I'm Noor Ul Hassan.                         ");
 	strcpy(about[8], "                             Student of BS(AI) and an ML Engineer              ");
